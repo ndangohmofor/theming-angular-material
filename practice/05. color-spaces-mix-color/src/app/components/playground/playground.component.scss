@@ -19,6 +19,12 @@
             width: 100px;
             height: 100px;
             border: 1px solid gray;  
+
+            --c-1: hsl(0, 100%, 50%);
+            --c-2: hsl(240, 100%, 50%);
+
+            --mix-rgb: rgb(128, 0, 128);
+            --mix-hsl: hsl(120, 100%, 50%);
                         
 
             &.color-1 {
