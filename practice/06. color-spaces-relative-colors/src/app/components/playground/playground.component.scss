@@ -25,7 +25,9 @@
             &:nth-child(2) {
                 background: hsl(from var(--color) h max(s, 30) clamp(40, l, 60));
             }
-
+            &:nth-child(3) {
+                background: hsl(from var(--color) h s 20%);
+            }
         }
     }
 }
