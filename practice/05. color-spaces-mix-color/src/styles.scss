@@ -20,37 +20,33 @@ body {
 
   --base-color: rgb(62, 135, 250);
 
-  --p-10: rgb(229, 239, 250);
-  --p-20: rgb(186, 212, 242);
-  --p-30: rgb(143, 186, 234);
+  --p-10: color-mix(in srgb, var(--base-color), white 85%);
+  --p-20: color-mix(in srgb, var(--base-color), white 62%);
+  --p-30: color-mix(in srgb, var(--base-color), white 41%);
   --p-40: color-mix(in srgb, var(--base-color), white 20%);
   --p-50: var(--base-color);
-  --p-60: rgb(36, 109, 194);
-  --p-70: rgb(28, 85, 151);
-  --p-80: rgb(23, 71, 125);
-  --p-90: rgb(19, 58, 103);
+  --p-60: color-mix(in srgb, var(--base-color), black 15%);
+  --p-70: color-mix(in srgb, var(--base-color), black 30%);
+  --p-80: color-mix(in srgb, var(--base-color), black 45%);
+  --p-90: color-mix(in srgb, var(--base-color), black 55%);
+}
+
+.palette {
+  --p-10: color-mix(in srgb, var(--base-color), white 85%);
+  --p-20: color-mix(in srgb, var(--base-color), white 62%);
+  --p-30: color-mix(in srgb, var(--base-color), white 41%);
+  --p-40: color-mix(in srgb, var(--base-color), white 20%);
+  --p-50: var(--base-color);
+  --p-60: color-mix(in srgb, var(--base-color), black 15%);
+  --p-70: color-mix(in srgb, var(--base-color), black 30%);
+  --p-80: color-mix(in srgb, var(--base-color), black 45%);
+  --p-90: color-mix(in srgb, var(--base-color), black 55%);
 }
 
 .pal-1 {
-  --p-10: rgb(200, 230, 201);
-  --p-20: rgb(165, 214, 167);
-  --p-30: rgb(129, 199, 132);
-  --p-40: rgb(102, 187, 106);
-  --p-50: rgb(76, 175, 80);
-  --p-60: rgb(67, 160, 71);
-  --p-70: rgb(56, 142, 60);
-  --p-80: rgb(46, 125, 50);
-  --p-90: rgb(27, 94, 32);
+  --base-color: rgb(76, 175, 80);
 }
 
 .pal-2 {
-  --p-10: hsl(291, 46%, 83%);
-  --p-20: hsl(291, 47%, 71%);
-  --p-30: hsl(291, 47%, 60%);
-  --p-40: hsl(291, 47%, 51%);
-  --p-50: hsl(291, 64%, 42%);
-  --p-60: hsl(287, 65%, 40%);
-  --p-70: hsl(282, 68%, 38%);
-  --p-80: hsl(277, 70%, 35%);
-  --p-90: hsl(267, 75%, 31%);
+  --base-color: hsl(291, 64%, 42%);
 }
