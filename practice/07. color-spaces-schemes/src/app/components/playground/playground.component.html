@@ -1,10 +1,15 @@
-<div class="colors" [style.--color]="selectedColor()">
-    <div class="item">
+<h1>Hello</h1>
+<input type="text" value="Hello" />
+<textarea>How are you</textarea>
+<select>
+  <option>One</option>
+  <option>Two</option>
+  <option>Three</option>
+</select>
 
-    </div>
-    <div class="item">
-        
-    </div>
+<div class="colors" [style.--color]="selectedColor()">
+  <div class="item"></div>
+  <div class="item"></div>
 </div>
 
 <input type="color" [(ngModel)]="selectedColor" />
