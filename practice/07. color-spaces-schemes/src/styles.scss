@@ -15,15 +15,25 @@ body {
   padding: 0;
   box-sizing: border-box;
 
-  --p-10: oklch(from var(--p-base) 0.92 0.07 h);
-  --p-20: oklch(from var(--p-base) 0.9 0.1 h);
-  --p-30: oklch(from var(--p-base) 0.8 0.2 h);
-  --p-40: oklch(from var(--p-base) 0.72 0.25 h);
-  --p-50: oklch(from var(--p-base) 0.67 0.31 h);
-  --p-60: oklch(from var(--p-base) 0.5 0.27 h);
-  --p-70: oklch(from var(--p-base) 0.35 0.25 h);
-  --p-80: oklch(from var(--p-base) 0.25 0.2 h);
-  --p-90: oklch(from var(--p-base) 0.13 0.2 h);
+  --clr-10: oklch(from var(--p-base) 0.92 0.07 h);
+  --clr-20: oklch(from var(--p-base) 0.9 0.1 h);
+  --clr-30: oklch(from var(--p-base) 0.8 0.2 h);
+  --clr-40: oklch(from var(--p-base) 0.72 0.25 h);
+  --clr-50: oklch(from var(--p-base) 0.67 0.31 h);
+  --clr-60: oklch(from var(--p-base) 0.5 0.27 h);
+  --clr-70: oklch(from var(--p-base) 0.35 0.25 h);
+  --clr-80: oklch(from var(--p-base) 0.25 0.2 h);
+  --clr-90: oklch(from var(--p-base) 0.13 0.2 h);
+
+  --p-10: light-dark(var(--clr-10), var(--clr-90));
+  --p-20: light-dark(var(--clr-20), var(--clr-80));
+  --p-30: light-dark(var(--clr-30), var(--clr-70));
+  --p-40: light-dark(var(--clr-40), var(--clr-60));
+  --p-50: light-dark(var(--clr-50), var(--clr-50));
+  --p-60: light-dark(var(--clr-60), var(--clr-40));
+  --p-70: light-dark(var(--clr-70), var(--clr-30));
+  --p-80: light-dark(var(--clr-80), var(--clr-20));
+  --p-90: light-dark(var(--clr-90), var(--clr-10));
 }
 
 :root {
@@ -39,22 +49,4 @@ body {
 
 .pal-2 {
   --p-base: oklch(from var(--base-color) 0.67 0.31 calc(h - 100));
-}
-
-h2 {
-  color: yellow;
-}
-
-@media (prefers-color-scheme: dark) {
-  * {
-    --p-90: oklch(from var(--p-base) 0.92 0.07 h);
-    --p-80: oklch(from var(--p-base) 0.9 0.1 h);
-    --p-70: oklch(from var(--p-base) 0.8 0.2 h);
-    --p-60: oklch(from var(--p-base) 0.72 0.25 h);
-    --p-50: oklch(from var(--p-base) 0.67 0.31 h);
-    --p-40: oklch(from var(--p-base) 0.5 0.27 h);
-    --p-30: oklch(from var(--p-base) 0.35 0.25 h);
-    --p-20: oklch(from var(--p-base) 0.25 0.2 h);
-    --p-10: oklch(from var(--p-base) 0.13 0.2 h);
-  }
 }

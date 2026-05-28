@@ -1,115 +1,113 @@
 :host {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex: 1;
+  gap: 30px;
+
+  .test {
     display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    flex: 1;
-    gap: 30px;
+    flex-direction: row;
 
-    .test {
+    div {
+      width: 200px;
+      height: 50px;
       display: flex;
-      flex-direction: row;
-
-      div {
-        width: 200px;
-        height: 50px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-      }
-
-      &.hsl {
-        :nth-of-type(1) {
-          background-color: hsl(270, 100%, 50%);
-        }        
-        :nth-of-type(2) {
-          background-color: hsl(90, 100%, 50%);
-        }
-      }
-
-      &.oklch {
-        :nth-of-type(1) {
-          background-color: oklch(53% 0.29 294);
-          color: white;
-        }        
-        :nth-of-type(2) {
-          background-color: oklch(53% 0.29 135);
-          color: white;
-        }
-      }
-
+      justify-content: center;
+      align-items: center;
     }
 
-    .palettes {
-        display: flex;
-        gap: 10px;
-        flex-direction: row;
-
-    }
-  
-    .palette {
-      display: flex;
-      flex-direction: column;
-      gap: 10px;
-  
-      .title {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        width: 160px;
-        height: 60px;
-        font-size: 1.4em;
-        color: var(--p-80);
+    &.hsl {
+      :nth-of-type(1) {
+        background-color: hsl(270, 100%, 50%);
       }
+      :nth-of-type(2) {
+        background-color: hsl(90, 100%, 50%);
+      }
+    }
 
-      .item {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        width: 160px;
-        height: 60px;
-        border: 1px solid gray;
-    
-        &:nth-of-type(1) {
-            background-color: var(--p-10);
-            color: black;
-          }
-          &:nth-of-type(2) {
-            background-color: var(--p-20);
-            color: black;
-          }
-          &:nth-of-type(3) {
-            background-color: var(--p-30);
-            color: black;
-          }
-          &:nth-of-type(4) {
-            background-color: var(--p-40);
-            color: black;
-          }
-          &:nth-of-type(5) {
-            background-color: var(--p-50);
-            color: white;
-          }
-          &:nth-of-type(6) {
-            background-color: var(--p-60);
-            color: white;
-          }
-          &:nth-of-type(7) {
-            background-color: var(--p-70);
-            color: white;
-          }
-          &:nth-of-type(8) {
-            background-color: var(--p-80);
-            color: white;
-          }
-          &:nth-of-type(9) {
-            background-color: var(--p-90);
-            color: white;
-          }
-    
-      }   
-    }      
+    &.oklch {
+      :nth-of-type(1) {
+        background-color: oklch(53% 0.29 294);
+        color: white;
+      }
+      :nth-of-type(2) {
+        background-color: oklch(53% 0.29 135);
+        color: white;
+      }
+    }
   }
 
-  
+  .palettes {
+    display: flex;
+    gap: 10px;
+    flex-direction: row;
+  }
 
+  .palette {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+
+    .title {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 160px;
+      height: 60px;
+      font-size: 1.4em;
+      color: var(--p-80);
+    }
+
+    h2 {
+      color: light-dark(brown, yellow);
+    }
+
+    .item {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 160px;
+      height: 60px;
+      border: 1px solid gray;
+
+      &:nth-of-type(1) {
+        background-color: var(--p-10);
+        color: black;
+      }
+      &:nth-of-type(2) {
+        background-color: var(--p-20);
+        color: black;
+      }
+      &:nth-of-type(3) {
+        background-color: var(--p-30);
+        color: black;
+      }
+      &:nth-of-type(4) {
+        background-color: var(--p-40);
+        color: black;
+      }
+      &:nth-of-type(5) {
+        background-color: var(--p-50);
+        color: white;
+      }
+      &:nth-of-type(6) {
+        background-color: var(--p-60);
+        color: white;
+      }
+      &:nth-of-type(7) {
+        background-color: var(--p-70);
+        color: white;
+      }
+      &:nth-of-type(8) {
+        background-color: var(--p-80);
+        color: white;
+      }
+      &:nth-of-type(9) {
+        background-color: var(--p-90);
+        color: white;
+      }
+    }
+  }
+}
