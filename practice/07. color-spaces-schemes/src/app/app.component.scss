@@ -74,39 +74,39 @@
 
       &:nth-of-type(1) {
         background-color: var(--p-10);
-        color: black;
+        color: light-dark(black, white);
       }
       &:nth-of-type(2) {
         background-color: var(--p-20);
-        color: black;
+        color: light-dark(black, white);
       }
       &:nth-of-type(3) {
         background-color: var(--p-30);
-        color: black;
+        color: light-dark(black, white);
       }
       &:nth-of-type(4) {
         background-color: var(--p-40);
-        color: black;
+        color: light-dark(black, white);
       }
       &:nth-of-type(5) {
         background-color: var(--p-50);
-        color: white;
+        color: light-dark(white, black);
       }
       &:nth-of-type(6) {
         background-color: var(--p-60);
-        color: white;
+        color: light-dark(white, black);
       }
       &:nth-of-type(7) {
         background-color: var(--p-70);
-        color: white;
+        color: light-dark(white, black);
       }
       &:nth-of-type(8) {
         background-color: var(--p-80);
-        color: white;
+        color: light-dark(white, black);
       }
       &:nth-of-type(9) {
         background-color: var(--p-90);
-        color: white;
+        color: light-dark(white, black);
       }
     }
   }
