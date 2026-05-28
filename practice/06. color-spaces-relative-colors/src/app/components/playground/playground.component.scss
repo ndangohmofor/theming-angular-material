@@ -1,33 +1,41 @@
 :host {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  border: 1px solid lightgray;
+  padding: 10px;
+
+  .colors {
     display: flex;
-    flex-direction: column;
-    gap: 10px;
-    border: 1px solid lightgray;
-    padding: 10px;
+    flex-direction: row;
+    gap: 4px;
 
-    .colors {
-        display: flex;
-        flex-direction: row;
-        gap: 4px;
+    .item {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 100px;
+      height: 100px;
+      border: 1px solid gray;
 
-        .item {            
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            width: 100px;
-            height: 100px;
-            border: 1px solid gray;  
-                        
-
-            &:nth-child(1) {
-                background: var(--color);
-            }
-            &:nth-child(2) {
-                background: hsl(from var(--color) h max(s, 30) clamp(40, l, 60));
-            }
-            &:nth-child(3) {
-                background: hsl(from var(--color) h s 20%);
-            }
-        }
+      &:nth-child(1) {
+        background: var(--color);
+      }
+      &:nth-child(2) {
+        background: hsl(from var(--color) h s 80%);
+      }
+      &:nth-child(3) {
+        background: hsl(from var(--color) h s 20%);
+      }
+      &:nth-child(4) {
+        background: rgb(from var(--color) 255 g b);
+      }
+      &:nth-child(5) {
+        background: rgb(from var(--color) 0 g b);
+      }
+      &:nth-child(6) {
+        background: rgb(from var(--color) r r r);
+      }
     }
+  }
 }
