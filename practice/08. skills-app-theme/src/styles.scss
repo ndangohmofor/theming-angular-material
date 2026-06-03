@@ -22,16 +22,16 @@ html {
   --grey-09: oklch(20% 0 0);
   --grey-10: oklch(09% 0 0);
 
-  --clr-01: oklc(from var(--base) 99% 0.02 h);
-  --clr-02: oklc(from var(--base) 93% 0.04 h);
-  --clr-03: oklc(from var(--base) 82% 0.07 h);
-  --clr-04: oklc(from var(--base) 72% 0.1 h);
-  --clr-05: oklc(from var(--base) 67% 0.14 h);
-  --clr-06: oklc(from var(--base) 50% 0.1 h);
-  --clr-07: oklc(from var(--base) 42% 0.08 h);
-  --clr-08: oklc(from var(--base) 33% 0.05 h);
-  --clr-09: oklc(from var(--base) 20% 0.03 h);
-  --clr-10: oklc(from var(--base) 09% 0.01 h);
+  --clr-01: oklch(from var(--base) 99% 0.02 h);
+  --clr-02: oklch(from var(--base) 93% 0.04 h);
+  --clr-03: oklch(from var(--base) 82% 0.07 h);
+  --clr-04: oklch(from var(--base) 72% 0.1 h);
+  --clr-05: oklch(from var(--base) 67% 0.14 h);
+  --clr-06: oklch(from var(--base) 50% 0.1 h);
+  --clr-07: oklch(from var(--base) 42% 0.08 h);
+  --clr-08: oklch(from var(--base) 33% 0.05 h);
+  --clr-09: oklch(from var(--base) 20% 0.03 h);
+  --clr-10: oklch(from var(--base) 09% 0.01 h);
 
   --p-05: light-dark(var(--clr-01), var(--clr-10));
   --p-10: light-dark(var(--clr-02), var(--clr-09));
@@ -74,11 +74,11 @@ html {
 
 /* Handle */
 ::-webkit-scrollbar-thumb {
-  background: oklch(82% 0 0);
+  background: var(--p-30);
   border-radius: 3px;
 }
 
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
-  background: oklch(72% 0 0);
+  background: var(--p-40);
 }
