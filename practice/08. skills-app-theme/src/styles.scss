@@ -68,7 +68,7 @@ html {
 /* Track */
 ::-webkit-scrollbar-track {
   margin: 4px 0px;
-  background: oklch(93% 0 0);
+  background: var(--n-20);
   border-radius: 3px;
 }
 
