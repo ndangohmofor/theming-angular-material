@@ -1,35 +1,46 @@
 /* You can add global styles to this file, and also import other style files */
-body, html {
-    height: 100%;
-    width: 100%;
+body,
+html {
+  height: 100%;
+  width: 100%;
 }
 
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+
+  --grey-01: oklch(99% 0 0);
+  --grey-02: oklch(93% 0 0);
+  --grey-03: oklch(82% 0 0);
+  --grey-04: oklch(72% 0 0);
+  --grey-05: oklch(67% 0 0);
+  --grey-06: oklch(50% 0 0);
+  --grey-07: oklch(42% 0 0);
+  --grey-08: oklch(33% 0 0);
+  --grey-09: oklch(20% 0 0);
+  --grey-10: oklch(09% 0 0);
 }
 
-
 ::-webkit-scrollbar {
-    width: 6px;
-  }
-  
-  /* Track */
-  ::-webkit-scrollbar-track {
-    margin: 4px 0px;
-    background: oklch(93% 0 0); 
-    border-radius: 3px;
-  }
-   
-  /* Handle */
-  ::-webkit-scrollbar-thumb {
-    background: oklch(82% 0 0);
-    border-radius: 3px;
-  }
-  
-  /* Handle on hover */
-  ::-webkit-scrollbar-thumb:hover {
-    background: oklch(72% 0 0);
-  }
+  width: 6px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  margin: 4px 0px;
+  background: oklch(93% 0 0);
+  border-radius: 3px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: oklch(82% 0 0);
+  border-radius: 3px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: oklch(72% 0 0);
+}
