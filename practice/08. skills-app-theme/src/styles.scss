@@ -32,6 +32,28 @@ html {
   --clr-08: oklc(from var(--base) 33% 0.05 h);
   --clr-09: oklc(from var(--base) 20% 0.03 h);
   --clr-10: oklc(from var(--base) 09% 0.01 h);
+
+  --p-05: light-dark(var(--clr-01), var(--clr-10));
+  --p-10: light-dark(var(--clr-02), var(--clr-09));
+  --p-20: light-dark(var(--clr-03), var(--clr-08));
+  --p-30: light-dark(var(--clr-04), var(--clr-07));
+  --p-40: light-dark(var(--clr-05), var(--clr-06));
+  --p-50: light-dark(var(--clr-06), var(--clr-05));
+  --p-60: light-dark(var(--clr-07), var(--clr-04));
+  --p-70: light-dark(var(--clr-08), var(--clr-03));
+  --p-80: light-dark(var(--clr-09), var(--clr-02));
+  --p-90: light-dark(var(--clr-10), var(--clr-01));
+
+  --n-05: light-dark(var(--grey-01), var(--grey-10));
+  --n-10: light-dark(var(--grey-02), var(--grey-09));
+  --n-20: light-dark(var(--grey-03), var(--grey-08));
+  --n-30: light-dark(var(--grey-04), var(--grey-07));
+  --n-40: light-dark(var(--grey-05), var(--grey-06));
+  --n-50: light-dark(var(--grey-06), var(--grey-05));
+  --n-60: light-dark(var(--grey-07), var(--grey-04));
+  --n-70: light-dark(var(--grey-08), var(--grey-03));
+  --n-80: light-dark(var(--grey-09), var(--grey-02));
+  --n-90: light-dark(var(--grey-10), var(--grey-01));
 }
 
 :root {
