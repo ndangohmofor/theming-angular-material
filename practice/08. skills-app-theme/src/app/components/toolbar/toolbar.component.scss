@@ -34,8 +34,8 @@
       }
 
       &:active {
-        background-color: rgb(66, 66, 66);
-        color: rgb(245, 245, 245);
+        background-color: var(--p-50);
+        color: var(--p-05);
       }
     }
   }
