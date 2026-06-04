@@ -28,8 +28,8 @@
     gap: 6px;
     padding: 16px;
     overflow-y: auto;
-    background-color: rgb(229, 229, 229);
-    border-left: 2px solid rgb(189, 189, 189);
+    background-color: var(--n-05);
+    border-left: 2px solid var(--n-20);
     box-shadow: -2px 0 4px rgba(0, 0, 0, 0.1);
   }
 }
