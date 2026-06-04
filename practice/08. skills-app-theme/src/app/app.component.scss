@@ -1,36 +1,35 @@
 :host {
-    display: grid;
-    grid-template-rows: auto 1fr;
-    grid-template-columns: 3fr 1fr;
-    grid-template-areas:
-      "toolbar toolbar"
-      "items notifications";
-    height: 100vh;
-  
-    app-toolbar {
-      grid-area: toolbar;
-    }
-  
-    .items {
-      grid-area: items;
-      display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-      gap: 16px;
-      padding: 16px;
-      overflow-y: auto;
-      background-color: rgb(245, 245, 245);
-    }
-  
-    .notifications {
-      grid-area: notifications;
-      display: flex;
-      flex-direction: column;
-      gap: 6px;
-      padding: 16px;
-      overflow-y: auto;
-      background-color: rgb(229, 229, 229);
-      border-left: 2px solid rgb(189, 189, 189);
-      box-shadow: -2px 0 4px rgba(0, 0, 0, 0.1);
-    }
+  display: grid;
+  grid-template-rows: auto 1fr;
+  grid-template-columns: 3fr 1fr;
+  grid-template-areas:
+    "toolbar toolbar"
+    "items notifications";
+  height: 100vh;
+
+  app-toolbar {
+    grid-area: toolbar;
   }
-  
+
+  .items {
+    grid-area: items;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 16px;
+    padding: 16px;
+    overflow-y: auto;
+    background-color: var(--n-10);
+  }
+
+  .notifications {
+    grid-area: notifications;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    padding: 16px;
+    overflow-y: auto;
+    background-color: rgb(229, 229, 229);
+    border-left: 2px solid rgb(189, 189, 189);
+    box-shadow: -2px 0 4px rgba(0, 0, 0, 0.1);
+  }
+}
