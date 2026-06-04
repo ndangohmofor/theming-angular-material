@@ -21,16 +21,16 @@
       text-decoration: none;
       padding: 8px 16px;
       border-radius: 4px;
-      color: rgb(97, 97, 97);
-      background-color: rgb(245, 245, 245);
+      color: var(--p-60);
+      background-color: var(--p-30);
       transition:
         background-color 0.3s,
         color 0.3s;
       cursor: pointer;
 
       &:hover {
-        background-color: rgb(117, 117, 117);
-        color: rgb(245, 245, 245);
+        background-color: var(--p-40);
+        color: var(--p-10);
       }
 
       &:active {
