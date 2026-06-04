@@ -1,10 +1,10 @@
 :host {
   display: flex;
   padding: 16px;
-  border: 1px solid rgb(200, 200, 200);
-  border-left: 5px solid rgb(120, 120, 120);
+  border: 1px solid var(--p-20);
+  border-left: 5px solid var(--p-60);
   border-radius: 6px;
-  background-color: rgb(250, 250, 250);
+  background-color: var(--p-10);
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   align-items: flex-start;
   gap: 12px;
@@ -18,29 +18,25 @@
     .notification-message {
       font-size: 1rem;
       font-weight: 500;
-      color: rgb(80, 80, 80);
+      color: var(--p-60);
       line-height: 1.4;
     }
 
     .notification-timestamp {
       font-size: 0.85rem;
-      color: rgb(140, 140, 140);
+      color: var(--p-40);
     }
   }
 
   &.info {
-    border-left-color: rgb(120, 120, 120);
   }
 
   &.warning {
-    border-left-color: rgb(160, 160, 160);
   }
 
   &.error {
-    border-left-color: rgb(80, 80, 80);
   }
 
   &.success {
-    border-left-color: rgb(100, 100, 100);
   }
 }
