@@ -1,3 +1,6 @@
+$my-color: green;
+
 h1 {
-    color: green;
+  color: $my-color;
+  border-bottom: 1px solid $my-color;
 }
