@@ -12,3 +12,9 @@ section.shopping-list ul {
 section.shopping-list ul > li {
   color: red;
 }
+section.shopping-list ul > li:hover {
+  background-color: lightgray;
+}
+[dir=rtl] section.shopping-list ul > li {
+  color: green;
+}

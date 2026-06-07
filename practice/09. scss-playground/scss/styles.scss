@@ -11,8 +11,17 @@ section.shopping-list {
   }
   ul {
     border: 1px solid gray;
+
     > li {
       color: red;
+
+      &:hover {
+        background-color: lightgray;
+      }
+
+      [dir="rtl"] & {
+        color: green;
+      }
     }
   }
 } // end section.shopping-list
