@@ -1,4 +1,9 @@
-$my-color: green;
+$my-color: green; // scss variable
+
+:root {
+  // css variable
+  --my-color: red;
+}
 
 h1 {
   color: $my-color;
