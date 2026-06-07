@@ -1,5 +1,9 @@
 $my-color: green; // scss variable
 
+@debug "my-color is: ", $my-color;
+@warn "my-color is: ", $my-color;
+// @error "my-color is: " $my-color;
+
 :root {
   // css variable
   --my-color: red;
@@ -8,6 +12,8 @@ $my-color: green; // scss variable
 h1 {
   color: $my-color;
   border-bottom: 1px solid $my-color;
+
+  @debug "The current parent is: " &;
 }
 
 section.shopping-list {
