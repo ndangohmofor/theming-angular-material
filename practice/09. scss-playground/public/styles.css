@@ -1,10 +1,17 @@
 :root {
-  --my-color: red;
+  --my-color: green;
 }
 
 h1 {
-  color: green;
+  color: var(--my-color);
   border-bottom: 1px solid green;
+}
+
+.test {
+  border-top: 2px;
+  border-bottom: 4px;
+  border-left: 2px;
+  border-right: 5px;
 }
 
 section.shopping-list h3 {

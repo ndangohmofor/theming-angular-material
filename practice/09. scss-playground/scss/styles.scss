@@ -1,4 +1,5 @@
 $my-color: green; // scss variable
+$prop: border;
 
 @debug "my-color is: ", $my-color;
 @warn "my-color is: ", $my-color;
@@ -6,14 +7,21 @@ $my-color: green; // scss variable
 
 :root {
   // css variable
-  --my-color: red;
+  --my-color: #{$my-color};
 }
 
 h1 {
-  color: $my-color;
+  color: var(--my-color);
   border-bottom: 1px solid $my-color;
 
   @debug "The current parent is: " &;
+}
+
+.test {
+  #{$prop}-top: 2px;
+  #{$prop}-bottom: 4px;
+  #{$prop}-left: 2px;
+  #{$prop}-right: 5px;
 }
 
 section.shopping-list {
