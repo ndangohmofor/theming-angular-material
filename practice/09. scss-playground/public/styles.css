@@ -6,7 +6,9 @@ h1 {
 section.shopping-list h3 {
   color: blue;
 }
-
+section.shopping-list ul {
+  border: 1px solid gray;
+}
 section.shopping-list ul > li {
   color: red;
 }

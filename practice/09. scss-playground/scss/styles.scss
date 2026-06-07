@@ -5,9 +5,14 @@ h1 {
   border-bottom: 1px solid $my-color;
 }
 
-section.shopping-list h3 {
-  color: blue;
-}
-section.shopping-list ul > li {
-  color: red;
+section.shopping-list {
+  h3 {
+    color: blue;
+  }
+  ul {
+    border: 1px solid gray;
+    > li {
+      color: red;
+    }
+  }
 }
