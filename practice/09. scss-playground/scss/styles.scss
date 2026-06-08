@@ -1,15 +1,32 @@
 @use "sass:color";
 @use "sass:list";
 
+@function generate-spacings($unit) {
+  @return (0, $unit, $unit * 2, $unit * 4);
+}
+
+$spacings: generate-spacings(8px);
+
+@debug $spacings;
+
+@each $spacing in $spacings {
+  .m-#{$spacing} {
+    margin: $spacing;
+  }
+}
+
 $my-color: green; // scss variable
 $primary-color: color.scale($my-color, $lightness: 20%);
 $prop: border;
 $theme: "light";
 $colors: (red, green, blue, purple, yellow);
+$other-colors: (orange, pink, brown, black, white);
 
 @debug list.index($colors, purple);
 $first-color: list.nth($colors, 1);
 $last-color: list.nth($colors, -1);
+
+$all-colors: list.join($colors, $other-colors);
 
 @debug "first-color is: ", $first-color;
 @debug "last-color is: ", $last-color;
