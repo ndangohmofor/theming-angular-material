@@ -1,13 +1,21 @@
 @use "sass:color";
+@use "sass:list";
 
 $my-color: green; // scss variable
 $primary-color: color.scale($my-color, $lightness: 20%);
 $prop: border;
 $theme: "light";
-$colors: (red, green, blue, yellow);
+$colors: (red, green, blue, purple, yellow);
+
+@debug list.index($colors, purple);
+$first-color: list.nth($colors, 1);
+$last-color: list.nth($colors, -1);
+
+@debug "first-color is: ", $first-color;
+@debug "last-color is: ", $last-color;
 
 @each $color in $colors {
-  .#{$color} {
+  .#{"text-" + $color} {
     color: $color;
   }
 }

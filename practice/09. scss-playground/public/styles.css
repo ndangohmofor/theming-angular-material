@@ -1,16 +1,20 @@
-.red {
+.text-red {
   color: red;
 }
 
-.green {
+.text-green {
   color: green;
 }
 
-.blue {
+.text-blue {
   color: blue;
 }
 
-.yellow {
+.text-purple {
+  color: purple;
+}
+
+.text-yellow {
   color: yellow;
 }
 
