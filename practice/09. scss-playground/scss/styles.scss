@@ -5,6 +5,20 @@
   @return (0, $unit, $unit * 2, $unit * 4);
 }
 
+$font-sizes: (
+  small: 12px,
+  medium: 16px,
+  large: 24px,
+);
+
+@debug "font-sizes: ", $font-sizes;
+
+@each $name, $size in $font-sizes {
+  .text-#{$name} {
+    font-size: $size;
+  }
+}
+
 $spacings: generate-spacings(8px);
 
 @debug $spacings;
