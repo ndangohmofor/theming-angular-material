@@ -33,6 +33,27 @@
   }
 }
 
+@mixin button-variant($theme: "light") {
+  @if $theme == "light" {
+    background-color: white;
+    color: black;
+  } @else if $theme == "dark" {
+    background-color: black;
+    color: white;
+  }
+}
+
+@mixin heading-sizes($base-size) {
+  @for $i from 1 through 6 {
+    h#{$i} {
+      font-size: $base-size + $i * 10;
+      font-weight: bold;
+    }
+  }
+}
+
+@include heading-sizes(10px);
+
 .my-class {
   @include all-buttons();
 }
