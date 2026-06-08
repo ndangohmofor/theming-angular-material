@@ -1,8 +1,8 @@
-$_primary-color: blue;
+@use "colors";
 
 .button {
   padding: 10px 20px;
-  background-color: $_primary-color;
+  background-color: colors.$primary-color;
   color: white;
   border: none;
   border-radius: 5px;
