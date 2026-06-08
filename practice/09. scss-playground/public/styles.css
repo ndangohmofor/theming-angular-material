@@ -1,3 +1,19 @@
+.red {
+  color: red;
+}
+
+.green {
+  color: green;
+}
+
+.blue {
+  color: blue;
+}
+
+.yellow {
+  color: yellow;
+}
+
 div.root {
   height: calc(100px + 20%);
   width: 600px;

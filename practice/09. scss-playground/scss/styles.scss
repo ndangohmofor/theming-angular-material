@@ -6,6 +6,12 @@ $prop: border;
 $theme: "light";
 $colors: (red, green, blue, yellow);
 
+@each $color in $colors {
+  .#{$color} {
+    color: $color;
+  }
+}
+
 @debug "my-color is: ", $my-color;
 @warn "my-color is: ", $my-color;
 // @error "my-color is: " $my-color;
