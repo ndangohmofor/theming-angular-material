@@ -1,9 +1,26 @@
+@use "sass:color";
+
 $my-color: green; // scss variable
+$primary-color: color.scale($my-color, $lightness: 20%);
 $prop: border;
+$theme: "light";
 
 @debug "my-color is: ", $my-color;
 @warn "my-color is: ", $my-color;
 // @error "my-color is: " $my-color;
+
+$background: if($theme == "dark", #000, #fff);
+
+@function double($number) {
+  $result: $number * 2;
+  @return $result;
+}
+
+div.root {
+  height: calc(100px + 20%);
+  width: double(300px);
+  background: $background;
+}
 
 :root {
   // css variable
