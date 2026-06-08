@@ -4,6 +4,7 @@ $my-color: green; // scss variable
 $primary-color: color.scale($my-color, $lightness: 20%);
 $prop: border;
 $theme: "light";
+$colors: (red, green, blue, yellow);
 
 @debug "my-color is: ", $my-color;
 @warn "my-color is: ", $my-color;
