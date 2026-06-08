@@ -1,15 +1,33 @@
 @use "sass:color";
 @use "sass:list";
+@use "sass:map";
 
 @function generate-spacings($unit) {
   @return (0, $unit, $unit * 2, $unit * 4);
 }
+
+$colors: (
+  "primary": blue,
+  "secondary": red,
+  "tertiary": green,
+  "danger": red,
+);
 
 $font-sizes: (
   small: 12px,
   medium: 16px,
   large: 24px,
 );
+
+$modified-sizes: map.set($font-sizes, large, 32px);
+
+$map-sizes: map.merge($font-sizes, $modified-sizes);
+
+@debug "font-sizes: ", $font-sizes;
+@debug "modified-sizes: ", $modified-sizes;
+@debug "map-sizes: ", $map-sizes;
+
+$medium-size: map.get($font-sizes, medium);
 
 @debug "font-sizes: ", $font-sizes;
 
