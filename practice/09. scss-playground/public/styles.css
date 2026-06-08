@@ -1,4 +1,4 @@
-.button-primary {
+.my-class .button-primary {
   background-color: blue;
   border: none;
   color: white;
@@ -10,8 +10,7 @@
   margin: 4px 2px;
   cursor: pointer;
 }
-
-.button-secondary {
+.my-class .button-secondary {
   background-color: green;
   border: none;
   color: white;
@@ -23,8 +22,7 @@
   margin: 4px 2px;
   cursor: pointer;
 }
-
-.button-error {
+.my-class .button-error {
   background-color: red;
   border: none;
   color: white;

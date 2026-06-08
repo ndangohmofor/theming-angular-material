@@ -19,16 +19,22 @@
   cursor: pointer;
 }
 
-.button-primary {
-  @include button-style(blue);
+@mixin all-buttons() {
+  $colors: (
+    primary: blue,
+    secondary: green,
+    error: red,
+  );
+
+  @each $name, $color in $colors {
+    .button-#{$name} {
+      @include button-style($color);
+    }
+  }
 }
 
-.button-secondary {
-  @include button-style(green);
-}
-
-.button-error {
-  @include button-style(red);
+.my-class {
+  @include all-buttons();
 }
 
 $colors: (
