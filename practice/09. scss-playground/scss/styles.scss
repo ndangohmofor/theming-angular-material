@@ -19,6 +19,18 @@
   cursor: pointer;
 }
 
+.button-primary {
+  @include button-style(blue);
+}
+
+.button-secondary {
+  @include button-style(green);
+}
+
+.button-error {
+  @include button-style(red);
+}
+
 $colors: (
   "primary": blue,
   "secondary": red,
