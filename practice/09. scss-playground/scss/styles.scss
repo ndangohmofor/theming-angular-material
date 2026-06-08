@@ -6,6 +6,19 @@
   @return (0, $unit, $unit * 2, $unit * 4);
 }
 
+@mixin button-style($color) {
+  background-color: $color;
+  border: none;
+  color: white;
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+}
+
 $colors: (
   "primary": blue,
   "secondary": red,
