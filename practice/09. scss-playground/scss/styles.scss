@@ -1,6 +1,7 @@
 @use "sass:color";
 @use "sass:list";
 @use "sass:map";
+@use "buttons";
 
 @function generate-spacings($unit) {
   @return (0, $unit, $unit * 2, $unit * 4);
