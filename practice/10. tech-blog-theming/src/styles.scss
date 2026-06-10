@@ -1,39 +1,8 @@
 :root {
-
-  // Neutral colors
-  --n-0: white;
-  --n-10: oklch(0.95 0 0);   // Lightest gray
-  --n-20: oklch(0.90 0 0);   // Lighter gray
-  --n-30: oklch(0.85 0 0);   // Light gray
-  --n-40: oklch(0.80 0 0);   // Gray
-  --n-50: oklch(0.77 0 0);   // Medium gray
-  --n-60: oklch(0.65 0 0);   // Dark gray
-  --n-70: oklch(0.55 0 0);   // Darker gray
-  --n-80: oklch(0.45 0 0);   // Very dark gray
-  --n-90: oklch(0.35 0 0);   // Darkest gray
-  --n-100: black;
-
-  // Primary colors (Blue)
-  --p-10: oklch(0.95 0.039 232);  // Lightest blue
-  --p-20: oklch(0.90 0.065 232);  // Lighter blue
-  --p-30: oklch(0.85 0.092 232);  // Light blue
-  --p-40: oklch(0.80 0.117 232);  // Soft blue
-  --p-50: oklch(0.75 0.162 232);  // Main blue
-  --p-60: oklch(0.70 0.155 232);  // Medium blue
-  --p-70: oklch(0.65 0.147 232);  // Deep blue
-  --p-80: oklch(0.60 0.139 232);  // Darker blue
-  --p-90: oklch(0.55 0.132 232);  // Darkest blue
-
-  // Accent colors (Pink)
-  --a-10: oklch(0.95 0.04 12);    // Lightest pink
-  --a-20: oklch(0.90 0.08 12);    // Light pink
-  --a-30: oklch(0.85 0.12 12);    // Soft pink
-  --a-40: oklch(0.80 0.25 12);    // Main pink
-  --a-50: oklch(0.75 0.24 12);    // Medium pink
-  --a-60: oklch(0.70 0.23 12);    // Deep pink
-  --a-70: oklch(0.65 0.22 12);    // Dark pink
-  --a-80: oklch(0.60 0.21 12);    // Darker pink
-  --a-90: oklch(0.55 0.20 12);    // Darkest pink
+  // Theme colors
+  --theme-primary: oklch(0.75 0.162 100);
+  --theme-accent: oklch(0.8 0.25 200);
+  color-scheme: light;
 
   // Shadows
   --shadow-light: rgba(0, 0, 0, 0.05);
@@ -41,7 +10,7 @@
   --shadow-dark: rgba(0, 0, 0, 0.15);
 
   // Special colors
-  --foreground-translucent: rgb(from var(--n-0)r g b / 0.6);
+  --foreground-translucent: rgb(from var(--n-0) r g b / 0.6);
 }
 
 * {
@@ -51,6 +20,70 @@
   box-sizing: border-box;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+
+  --color-gray-0: white;
+  --color-gray-10: oklch(0.95 0 0); // Lightest gray
+  --color-gray-20: oklch(0.9 0 0); // Lighter gray
+  --color-gray-30: oklch(0.85 0 0); // Light gray
+  --color-gray-40: oklch(0.8 0 0); // Gray
+  --color-gray-50: oklch(0.77 0 0); // Medium gray
+  --color-gray-60: oklch(0.65 0 0); // Dark gray
+  --color-gray-70: oklch(0.55 0 0); // Darker gray
+  --color-gray-80: oklch(0.45 0 0); // Very dark gray
+  --color-gray-90: oklch(0.35 0 0); // Darkest gray
+  --color-gray-100: black;
+
+  --color-primary-10: oklch(from var(--theme-primary) 0.95 0.039 h);
+  --color-primary-20: oklch(from var(--theme-primary) 0.9 0.065 h);
+  --color-primary-30: oklch(from var(--theme-primary) 0.85 0.092 h);
+  --color-primary-40: oklch(from var(--theme-primary) 0.8 0.117 h);
+  --color-primary-50: oklch(from var(--theme-primary) 0.75 0.162 h);
+  --color-primary-60: oklch(from var(--theme-primary) 0.7 0.155 h);
+  --color-primary-70: oklch(from var(--theme-primary) 0.65 0.147 h);
+  --color-primary-80: oklch(from var(--theme-primary) 0.6 0.139 h);
+  --color-primary-90: oklch(from var(--theme-primary) 0.55 0.132 h);
+
+  --color-accent-10: oklch(from var(--theme-accent) 0.95 0.04 h);
+  --color-accent-20: oklch(from var(--theme-accent) 0.9 0.08 h);
+  --color-accent-30: oklch(from var(--theme-accent) 0.85 0.12 h);
+  --color-accent-40: oklch(from var(--theme-accent) 0.8 0.25 h);
+  --color-accent-50: oklch(from var(--theme-accent) 0.75 0.24 h);
+  --color-accent-60: oklch(from var(--theme-accent) 0.7 0.23 h);
+  --color-accent-70: oklch(from var(--theme-accent) 0.65 0.22 h);
+  --color-accent-80: oklch(from var(--theme-accent) 0.6 0.21 h);
+  --color-accent-90: oklch(from var(--theme-accent) 0.55 0.2 h);
+
+  --n-0: light-dark(var(--color-gray-0), var(--color-gray-100));
+  --n-10: light-dark(var(--color-gray-10), var(--color-gray-90));
+  --n-20: light-dark(var(--color-gray-20), var(--color-gray-80));
+  --n-30: light-dark(var(--color-gray-30), var(--color-gray-70));
+  --n-40: light-dark(var(--color-gray-40), var(--color-gray-60));
+  --n-50: light-dark(var(--color-gray-50), var(--color-gray-50));
+  --n-60: light-dark(var(--color-gray-60), var(--color-gray-40));
+  --n-70: light-dark(var(--color-gray-70), var(--color-gray-30));
+  --n-80: light-dark(var(--color-gray-80), var(--color-gray-20));
+  --n-90: light-dark(var(--color-gray-90), var(--color-gray-10));
+  --n-100: light-dark(var(--color-gray-100), var(--color-gray-0));
+
+  --p-10: light-dark(var(--color-primary-10), var(--color-primary-90));
+  --p-20: light-dark(var(--color-primary-20), var(--color-primary-80));
+  --p-30: light-dark(var(--color-primary-30), var(--color-primary-70));
+  --p-40: light-dark(var(--color-primary-40), var(--color-primary-60));
+  --p-50: light-dark(var(--color-primary-50), var(--color-primary-50));
+  --p-60: light-dark(var(--color-primary-60), var(--color-primary-40));
+  --p-70: light-dark(var(--color-primary-70), var(--color-primary-30));
+  --p-80: light-dark(var(--color-primary-80), var(--color-primary-20));
+  --p-90: light-dark(var(--color-primary-90), var(--color-primary-10));
+
+  --a-10: light-dark(var(--color-accent-10), var(--color-accent-90));
+  --a-20: light-dark(var(--color-accent-20), var(--color-accent-80));
+  --a-30: light-dark(var(--color-accent-30), var(--color-accent-70));
+  --a-40: light-dark(var(--color-accent-40), var(--color-accent-60));
+  --a-50: light-dark(var(--color-accent-50), var(--color-accent-50));
+  --a-60: light-dark(var(--color-accent-60), var(--color-accent-40));
+  --a-70: light-dark(var(--color-accent-70), var(--color-accent-30));
+  --a-80: light-dark(var(--color-accent-80), var(--color-accent-20));
+  --a-90: light-dark(var(--color-accent-90), var(--color-accent-10));
 }
 
 .back-button {
@@ -101,7 +134,8 @@
     }
   }
 
-  ul, ol {
+  ul,
+  ol {
     margin: 1.5rem 0;
     padding-left: 2rem;
     color: var(--n-80);
@@ -122,7 +156,7 @@
 
   pre {
     background: var(--n-90);
-    padding: .5rem .5rem .5rem;
+    padding: 0.5rem 0.5rem 0.5rem;
     border-radius: 4px;
     overflow: hidden;
     position: relative;
@@ -131,7 +165,7 @@
     line-height: 1.2;
 
     code {
-      font-family: 'Fira Code', 'Consolas', monospace;
+      font-family: "Fira Code", "Consolas", monospace;
       font-size: 0.95rem;
       color: var(--n-20);
       display: block;
@@ -143,13 +177,28 @@
       }
 
       // Syntax highlighting using direct descendant selectors
-      span[class*="keyword"] { color: var(--a-40); }
-      span[class*="function"] { color: var(--p-30); }
-      span[class*="string"] { color: var(--p-50); }
-      span[class*="comment"] { color: var(--n-40); font-style: italic; }
-      span[class*="number"] { color: var(--p-70); }
-      span[class*="operator"] { color: var(--a-40); }
-      span[class*="punctuation"] { color: var(--n-30); }
+      span[class*="keyword"] {
+        color: var(--a-40);
+      }
+      span[class*="function"] {
+        color: var(--p-30);
+      }
+      span[class*="string"] {
+        color: var(--p-50);
+      }
+      span[class*="comment"] {
+        color: var(--n-40);
+        font-style: italic;
+      }
+      span[class*="number"] {
+        color: var(--p-70);
+      }
+      span[class*="operator"] {
+        color: var(--a-40);
+      }
+      span[class*="punctuation"] {
+        color: var(--n-30);
+      }
     }
   }
 }
