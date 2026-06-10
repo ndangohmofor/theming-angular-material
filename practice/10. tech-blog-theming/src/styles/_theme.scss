@@ -1,0 +1,5 @@
+@mixin create($primary: blue, $accent: pink, $scheme: light dark) {
+  --theme-primary: #{$primary};
+  --theme-accent: #{$accent};
+  color-scheme: #{$scheme};
+}
