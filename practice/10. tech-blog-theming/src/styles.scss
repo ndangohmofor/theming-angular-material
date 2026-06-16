@@ -11,6 +11,14 @@
   levels.$accent-levels
 );
 
+.theme-2 {
+  @include theme.create($primary: purple, $accent: orange, $scheme: light);
+}
+
+.theme-3 {
+  @include theme.create($primary: green, $accent: brown, $scheme: light);
+}
+
 :root {
   // Theme colors
   @include theme.create($primary: blue, $accent: pink, $scheme: light);
