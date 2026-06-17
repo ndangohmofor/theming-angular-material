@@ -17,9 +17,30 @@
           }
         </select>
         <div class="mode-select">
-          <button class="mode-button active" title="Light mode">☀️</button>
-          <button class="mode-button" title="System mode">💻</button>
-          <button class="mode-button" title="Dark mode">🌙</button>
+          <button
+            class="mode-button"
+            title="Light mode"
+            [class.active]="themeService.selectedScheme().name === 'Light'"
+            (click)="themeService.setScheme('Light')"
+          >
+            ☀️
+          </button>
+          <button
+            class="mode-button"
+            title="System mode"
+            [class.active]="themeService.selectedScheme().name === 'System'"
+            (click)="themeService.setScheme('System')"
+          >
+            💻
+          </button>
+          <button
+            class="mode-button"
+            title="Dark mode"
+            [class.active]="themeService.selectedScheme().name === 'Dark'"
+            (click)="themeService.setScheme('Dark')"
+          >
+            🌙
+          </button>
         </div>
       </div>
     </div>
