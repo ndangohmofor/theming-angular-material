@@ -1,59 +1,67 @@
 @if (post(); as currentPost) {
-    <div class="container">
-        <article class="post">
-            <header class="post-header">
-                <h1>{{ currentPost.title }}</h1>
-                <div class="post-meta">
-                    <div class="meta-left">
-                        <app-author-card [author]="currentPost.author" />
-                    </div>
-                    <div class="meta-right">
-                        <div class="post-info">
-                            <div class="info-item">
-                                <span class="symbol">📅</span>
-                                <span>{{ currentPost.publishDate | date:'mediumDate' }}</span>
-                            </div>
-                            <div class="info-item">
-                                <span class="symbol">⏱️</span>
-                                <span>{{ currentPost.readTime }} min read</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </header>
-
-            <img [src]="currentPost.imageUrl" [alt]="currentPost.title" class="post-image">
-
-            <div class="post-content" content-html [innerHTML]="currentPost.content"></div>
-
-            <footer class="post-footer">
-                <app-tag-list [tags]="currentPost.tags" />
-                <div class="engagement">
-                    <span class="likes">
-                        <span class="symbol">❤️</span>
-                        {{ currentPost.likes }}
-                    </span>
-                    <span class="comments">
-                        <span class="symbol">💬</span>
-                        {{ currentPost.comments }}
-                    </span>
-                </div>
-            </footer>
-        </article>
-
-        <div class="actions">
-            <button class="back-button" routerLink="/home">
-                <span class="symbol">←</span>
-                Back to Posts
-            </button>
+  <div class="container">
+    <article class="post">
+      <header class="post-header">
+        <h1>{{ currentPost.title }}</h1>
+        <div class="post-meta">
+          <div class="meta-left">
+            <app-author-card [author]="currentPost.author" />
+          </div>
+          <div class="meta-right">
+            <div class="post-info">
+              <div class="info-item">
+                <span class="symbol">📅</span>
+                <span>{{ currentPost.publishDate | date: "mediumDate" }}</span>
+              </div>
+              <div class="info-item">
+                <span class="symbol">⏱️</span>
+                <span>{{ currentPost.readTime }} min read</span>
+              </div>
+            </div>
+          </div>
         </div>
+      </header>
+
+      <img
+        [src]="currentPost.imageUrl"
+        [alt]="currentPost.title"
+        class="post-image"
+      />
+
+      <div
+        class="post-content"
+        content-html
+        [innerHTML]="currentPost.content"
+      ></div>
+
+      <footer class="post-footer">
+        <app-tag-list [tags]="currentPost.tags" />
+        <div class="engagement">
+          <span class="likes">
+            <span class="symbol">❤️</span>
+            {{ currentPost.likes }}
+          </span>
+          <span class="comments">
+            <span class="symbol">💬</span>
+            {{ currentPost.comments }}
+          </span>
+        </div>
+      </footer>
+    </article>
+
+    <div class="actions">
+      <button class="back-button" routerLink="/home">
+        <span class="symbol">←</span>
+        Back to Posts
+      </button>
     </div>
+  </div>
 } @else {
-    <div class="container">
-        <p>Post not found</p>
-        <button class="back-button" routerLink="/home">
-            <span class="symbol">←</span>
-            Back to Posts
-        </button>
-    </div>
-} 
+  <div class="container">
+    <p>Post not found</p>
+    <button class="back-button" routerLink="/home">
+      <span class="symbol">←</span>
+      Back to Posts
+    </button>
+  </div>
+}
