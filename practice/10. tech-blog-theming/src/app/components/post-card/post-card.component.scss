@@ -5,7 +5,9 @@
     box-shadow: 0 2px 8px var(--shadow-medium);
     overflow: hidden;
     border: 1px solid var(--n-30);
-    transition: transform 0.2s, border-color 0.2s;
+    transition:
+      transform 0.2s,
+      border-color 0.2s;
     cursor: pointer;
 
     &:hover {
@@ -88,5 +90,3 @@
     }
   }
 }
-
-
