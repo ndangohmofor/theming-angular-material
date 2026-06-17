@@ -1,31 +1,37 @@
 <nav class="main-nav">
-    <div class="nav-content">
-        <div class="nav-left">
-            <a routerLink="/home" class="logo">Tech Blog</a>
-        </div>
-        <div class="nav-right">
-            <div class="theme-controls">
-                <select class="theme-select" title="Select color theme">
-                    <option value="blue-pink">Blue & Pink</option>
-                    <option value="purple-orange">Purple & Orange</option>
-                    <option value="green-pink">Green & Brown</option>
-                </select>
-                <div class="mode-select">
-                    <button class="mode-button active" title="Light mode" >☀️</button>
-                    <button class="mode-button" title="System mode" >💻</button>
-                    <button class="mode-button" title="Dark mode" >🌙</button>
-                </div>
-            </div>
-        </div>
+  <div class="nav-content">
+    <div class="nav-left">
+      <a routerLink="/home" class="logo">Tech Blog</a>
     </div>
+    <div class="nav-right">
+      <div class="theme-controls">
+        <select
+          class="theme-select"
+          title="Select color theme"
+          #colorSelect
+          [value]="themeService.selectedColor().name"
+          (change)="themeService.setColor(colorSelect.value)"
+        >
+          @for (option of themeService.possibleColors; track option.name) {
+            <option [value]="option.name">{{ option.name }}</option>
+          }
+        </select>
+        <div class="mode-select">
+          <button class="mode-button active" title="Light mode">☀️</button>
+          <button class="mode-button" title="System mode">💻</button>
+          <button class="mode-button" title="Dark mode">🌙</button>
+        </div>
+      </div>
+    </div>
+  </div>
 </nav>
 
 <main>
-    <router-outlet></router-outlet>
+  <router-outlet></router-outlet>
 </main>
 
 <footer class="main-footer">
-    <div class="footer-content">
-        <p>&copy; 2025 Tech Blog. All rights reserved.</p>
-    </div>
+  <div class="footer-content">
+    <p>&copy; 2025 Tech Blog. All rights reserved.</p>
+  </div>
 </footer>
