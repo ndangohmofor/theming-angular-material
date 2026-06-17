@@ -46,7 +46,7 @@ export class ThemeService {
     });
 
     effect(() => {
-      this.#document.body.setAttribute('color-scheme', this.#scheme());
+      this.#document.body.style.setProperty('color-scheme', this.#scheme());
     });
   }
 }
