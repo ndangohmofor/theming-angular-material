@@ -7,9 +7,9 @@
   color-scheme: #{$scheme};
 }
 
-@mixin _gray-entries($levels) {
+@mixin _grey-entries($levels) {
   @each $key, $lightness in $levels {
-    --color-gray-#{$key}: oklch(#{$lightness} 0 0);
+    --color-grey-#{$key}: oklch(#{$lightness} 0 0);
   }
 }
 
@@ -21,15 +21,7 @@
   }
 }
 
-@mixin _primary-entries($levels) {
-  @each $key, $lightness in $levels {
-    --color-primary-#{$key}: oklch(
-      from var(--theme-primary) #{$lightness} 0.039 h
-    );
-  }
-}
-
-@mixin _palette_entries($prefix, $entry-base, $levels) {
+@mixin _palette-entries($prefix, $entry-base, $levels) {
   $keys: map.keys($levels);
   $length: list.length($keys);
 
@@ -39,14 +31,13 @@
 
     $light-color: var(--color-#{$entry-base}-#{$light-key});
     $dark-color: var(--color-#{$entry-base}-#{$dark-key});
-
     --#{$prefix}-#{$light-key}: light-dark(#{$light-color}, #{$dark-color});
   }
 }
 
 @mixin color-system($grey-levels, $primary-levels, $accent-levels) {
   * {
-    @include _gray-entries($grey-levels);
+    @include _grey-entries($grey-levels);
     @include _relative-color-entries(
       "primary",
       var(--theme-primary),
@@ -57,8 +48,8 @@
       var(--theme-accent),
       $accent-levels
     );
-    @include _palette_entries("n", "grey", $grey-levels);
-    @include _palette_entries("p", "primary", $primary-levels);
-    @include _palette_entries("a", "accent", $accent-levels);
+    @include _palette-entries("n", "grey", $grey-levels);
+    @include _palette-entries("p", "primary", $primary-levels);
+    @include _palette-entries("a", "accent", $accent-levels);
   }
 }
