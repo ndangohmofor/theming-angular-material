@@ -1,30 +1,53 @@
-.fav-button {
-  background: var(--foreground-translucent);
-  border: none;
-  padding: 8px;
-  cursor: pointer;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  transition: transform 0.2s, box-shadow 0.2s;
-  border-radius: 50%;
-  box-shadow: 0 2px 4px var(--shadow-medium);
+:host {
+  // --fav-button-background
+  // --fav-button-stroke-color
+  // --fav-button-fill-on
+  // --fav-button-shadow-color
 
-  &:hover {
-    transform: scale(1.1);
-    box-shadow: 0 3px 6px var(--shadow-dark);
-  }
+  ---fav-button-background: var(
+    --fav-button-background,
+    var(--foreground-translucent, rgba(255, 255, 255, 0.9))
+  );
+  ---fav-button-stroke-color: var(
+    --fav-button-stroke-color,
+    var(--a-70, #f43d78)
+  );
+  ---fav-button-fill-on: var(--fav-button-fill-on, var(--a-40, #ff62a2));
+  ---fav-button-shadow-color: var(
+    --fav-button-shadow-color,
+    var(--shadow-medium, rgba(0, 0, 0, 0.1))
+  );
 
-  svg {
-    width: 20px;
-    height: 20px;
-    fill: transparent;
-    color: var(--a-40);
-    transition: all 0.2s;
-  }
+  .fav-button {
+    background: var(---fav-button-background);
+    border: none;
+    padding: 8px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition:
+      transform 0.2s,
+      box-shadow 0.2s;
+    border-radius: 50%;
+    box-shadow: 0 2px 4px var(---fav-button-shadow-color);
 
-  &.is-favorite svg {
-    fill: var(--a-40);
-    color: var(--a-40);
+    &:hover {
+      transform: scale(1.1);
+      box-shadow: 0 3px 6px var(---fav-button-shadow-color);
+    }
+
+    svg {
+      width: 20px;
+      height: 20px;
+      fill: transparent;
+      transition: all 0.2s;
+      stroke: var(---fav-button-stroke-color);
+      stroke-width: "2";
+    }
+
+    &.is-favorite svg {
+      fill: var(---fav-button-fill-on);
+    }
   }
 }
