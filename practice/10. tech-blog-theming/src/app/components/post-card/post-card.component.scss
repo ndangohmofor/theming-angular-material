@@ -1,4 +1,7 @@
 :host {
+  --fav-button-fill-on: var(--p-50);
+  --fav-button-stroke-color: var(--p-80);
+
   .post-card {
     background: var(--n-0);
     border-radius: 8px;
