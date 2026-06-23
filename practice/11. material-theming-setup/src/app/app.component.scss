@@ -1,17 +1,20 @@
 :host {
+  h1 {
+    color: var(--mat-sys-tertiary);
+  }
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+
+  .actions {
     display: flex;
-    flex-direction: column;
-    gap: 1rem;
+    flex-direction: row;
+    gap: 0.7rem;
+    align-items: center;
 
-    .actions {
-        display: flex;
-        flex-direction: row;
-        gap: 0.7rem;
-        align-items: center;
+    background-color: lightcyan;
+    border: 1px solid lightblue;
 
-        background-color: lightcyan;
-        border: 1px solid lightblue;
-
-        padding: 0.5rem;
-    }
+    padding: 0.5rem;
+  }
 }
