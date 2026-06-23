@@ -1,5 +1,9 @@
 :host {
   h1 {
+    color: var(--mat-sys-tertiary);
+  }
+
+  h2 {
     color: var(--mat-sys-secondary);
   }
   display: flex;
@@ -12,8 +16,8 @@
     gap: 0.7rem;
     align-items: center;
 
-    background-color: lightcyan;
-    border: 1px solid lightblue;
+    background-color: var(--mat-sys-primary-container);
+    border: 1px solid var(--mat-sys-on-primary-container);
 
     padding: 0.5rem;
   }
